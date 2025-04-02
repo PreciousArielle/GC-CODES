@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        #text {
+            font-size: 24px;
+        }
+
+        button {
+            background-color: royalblue;
+            color: white;
+            padding: 10px 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="text">This is the original text.</p>
+    <button onclick="toggleText()">Click to Change Text</button>
+
+    <script>
+        function toggleText() {
+            let text = document.getElementById("text");
+            if (text.innerText === "This is the original text.") {
+                text.innerText = "The text has been changed!";
+                text.style.color = "green";
+            } else {
+                text.innerText = "This is the original text.";
+                text.style.color = "black";
+            }
+        }
+    </script>
+
+</body>
+</html>

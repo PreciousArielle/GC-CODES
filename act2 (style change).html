@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+     body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+	    background-color: lightgrey;
+        }
+
+        #styledText {
+            font-size: 20px;
+	    color: black;
+	    font-weight: normal;
+        }
+
+   button {
+            background-color: royalblue;
+            color: white;
+            padding: 10px 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: dodgerblue;
+        }
+</style>
+</head>
+<body>
+
+    <p id="styledText">This text will change style.</p>
+    <button onclick="toggleStyle()">Click to Change Style</button>
+
+    <script>
+        function toggleStyle() {
+           let element = document.getElementById("styledText");
+
+           if (element.style.color === "red") {
+	     element.style.color = "black";
+            element.style.fontSize = "20px";
+            element.style.fontWeight = "normal";
+	   } else {
+           element.style.color = "red";
+           element.style.fontSize = "20px";
+           element.style.fontWeight = "bold";
+            }
+       
+        }
+    </script>
+
+</body>
+</html>
